@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
 
-
-function ListItem({text, index, deleteItem}){
-    return <li>{text} <button onClick={()=>{deleteItem(index)}}>Delette Item</button>  </li>
+function ListItem(props){
+    console.log(props);
+    const {text, id, index, deleteItem} = props
+    return <li key={id}>{text} <button onClick={()=>{deleteItem(index)}}>Delete Item</button>  </li>
 }
 
 export default ListItem; 

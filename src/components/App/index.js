@@ -11,9 +11,10 @@ function App() {
   function addToList(todo){
     settoDo([...toDo, todo]); 
   }
-function deleteItem(index){
+
+  function deleteItem(index){
   settoDo([...toDo.slice(0,index),...toDo.slice(index+1)])
-}
+  }
 
   return <div className="App">
     <Input addToList={addToList}/>   
@@ -30,5 +31,3 @@ export default App;
       // remove item from list
       // render an Input and List
 
-          //<List toDo= Array.from{toDo}/>
-      //    <List toDo= {toDo}/>

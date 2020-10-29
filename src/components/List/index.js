@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-
 import ListItem from '../ListItem';
 
 function List({toDoArray, deleteItem}){
-  console.log(toDoArray);
-    return [
+  //console.log(toDoArray);
+  //console.log(toDoArray[0].number);
+    return (
         <ul>
-        {toDoArray.map((toDo, index)=>
-     <ListItem text={toDo} index = {index} deleteItem = {deleteItem} />
-     ) }
-        </ul>
-    ]
+        {toDoArray.map((toDo, index)=> 
+     <ListItem text={toDo} id={index} index={index} deleteItem={deleteItem} />
+    )}
+        </ul> 
+    )
 }
 
 export default List; 

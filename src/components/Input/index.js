@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 function Input({addToList}){
     const [text, setText] = useState('');
 
-    function handleChange(event){
-      setText(event.target.value)
-      }
+    // function handleChange(event){
+      
+    //   }
     
 
     return [    
-        <input onChange={event => handleChange(event)} />,
+        <input onChange={event => setText(event.target.value)} />,
         <button onClick={()=>{addToList(text)}}>Set To Do</button>   
     ]}
 
