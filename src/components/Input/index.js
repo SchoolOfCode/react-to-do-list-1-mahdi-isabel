@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 
 
-function Input(){
+function Input({addToList}){
     const [text, setText] = useState('');
 
     function handleChange(event){
       setText(event.target.value)
-      console.log(text);
       }
+    
 
     return [    
-        <input input={state.input} onChange={handleChange}/>,
-        <button >Set To Do</button>     //onClick = {} add function
+        <input onChange={event => handleChange(event)} />,
+        <button onClick={()=>{addToList(text)}}>Set To Do</button>   
     ]}
 
 export default Input; 
