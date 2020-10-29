@@ -4,22 +4,23 @@ import "./App.css";
 import Input from '../Input'
 
 function App() {
-  const [text, setText] = useState('');
-
-  function handleChange(event){
-    setText(event.target.Value)
-    }
+  const [toDo, settoDo] = useState('');
 
   return <div className="App">
-    <Input text={text} setText={handleChange}/>
+    <Input text={toDo}/>
+
+
+
     
   </div>;
 }
 
 export default App;
 
+//state list of to dos 
+// behaviour:
 
-// have our input component with properties text input and add to list button
+      // add item to list
+      // remove item from list
+      // render an Input and List
 
-// have our list component with properties array of todos and delete function
-      //within our list component we'll have our list item component 
