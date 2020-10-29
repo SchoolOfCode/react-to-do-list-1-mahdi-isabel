@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 
 import ListItem from '../ListItem';
 
-function List({toDoArray}){
+function List({toDoArray, deleteItem}){
   console.log(toDoArray);
     return [
         <ul>
-        {toDoArray.map((toDo)=>
-     <ListItem text={toDo} />
+        {toDoArray.map((toDo, index)=>
+     <ListItem text={toDo} index = {index} deleteItem = {deleteItem} />
      ) }
         </ul>
     ]

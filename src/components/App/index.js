@@ -11,10 +11,13 @@ function App() {
   function addToList(todo){
     settoDo([...toDo, todo]); 
   }
+function deleteItem(index){
+  settoDo([...toDo.slice(0,index),...toDo.slice(index+1)])
+}
 
   return <div className="App">
     <Input addToList={addToList}/>   
-    <List toDoArray={toDo}/>
+    <List toDoArray={toDo} deleteItem = {deleteItem} />
   </div>;
 }
 
