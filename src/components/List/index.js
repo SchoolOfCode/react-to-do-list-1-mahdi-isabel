@@ -1,16 +1,19 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
 
+import ListItem from '../ListItem';
 
-// function List({todo}){
+function List({toDoArray}){
+  console.log(toDoArray);
+    return [
+        <ul>
+        {toDoArray.map((toDo)=>
+     <ListItem text={toDo} />
+     ) }
+        </ul>
+    ]
+}
 
-//     return [
-//         <ul>
-//          <Li/>
-//         </ul>
-//     ]
-// }
-
-// export default List; 
+export default List; 
 
 
 

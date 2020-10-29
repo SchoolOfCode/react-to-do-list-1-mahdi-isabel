@@ -1,7 +1,8 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
 
 
-// function ListItem({addToList}){
-// }
+function ListItem({text}){
+    return <li>{text}</li>
+}
 
-// export default ListItem; 
+export default ListItem; 
