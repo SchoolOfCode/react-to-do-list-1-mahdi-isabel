@@ -6,13 +6,12 @@ function Input(){
 
     function handleChange(event){
       setText(event.target.value)
-
       console.log(text);
       }
 
     return [    
-        <input />,
-        <button onClick={handleChange}>Set To Do</button>
+        <input input={state.input} onChange={handleChange}/>,
+        <button >Set To Do</button>     //onClick = {} add function
     ]}
 
 export default Input; 
