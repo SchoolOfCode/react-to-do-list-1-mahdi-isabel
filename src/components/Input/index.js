@@ -4,8 +4,9 @@ import React, { useState } from 'react'
 function Input(){
     const [text, setText] = useState('');
 
-    function handleChange(input){
-      setText(input.Value)
+    function handleChange(event){
+      setText(event.target.value)
+
       console.log(text);
       }
 
